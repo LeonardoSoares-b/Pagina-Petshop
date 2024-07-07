@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --default-border:border: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . . ."
+    ". Form . logo ."
+    ". Form . logo ."
+    ". . . . .";
+  gap: 8.5rem;
+}
+
+main {
+  grid-area: logo;
+}
+
+aside {
+  grid-area: Form;
+}
+
+aside h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 75px;
+  text-align: center;
+}
+
+aside h1 span,
+main h2 span {
+  color: #ff5678;
+}
+
+main {
+  width: 60rem;
+  height: 52rem;
+  border: var(--default-border);
+  padding: 4.4rem 5.7rem;
+  border-radius: 1.2rem;
+}
+
+main h2 {
+  max-width: 43rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+main .actions {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+main .actions a {
+  border-radius: 1.2rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  height: 5.5rem;
+  background-color: #35e6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 5.4rem;
+}
+
+main .actions a + a {
+  margin-top: 4.8rem;
+  background-color: #ff5678;
+  position: relative;
+}
+
+main header{
+  display: flex;
+  gap: 0 1.8rem;
+  align-items: center;
+}
+
+main header i{
+  font-size: 2.5rem;
+  color: #ff5678;
+}
+
+main footer p {
+  font-size: 1.6rem;
+  margin-top: 1.8rem;
+}
+
+main footer a {
+  font-size: 1.8rem;
+  margin-top: 1.8rem;
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+main form {
+  margin-top: 1.6rem;
+}
+
+main form label{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+main form :is(input, select) {
+  width: 48.9rem;
+  height: 5.5rem;
+border: var(--default-border);
+  background: #fff;
+  border-radius: 1.2rem;
+}
+
+main form select{
+  appearance: none;
+}
+
+
+main form .points{
+  position: relative;
+}
+
+main form input + button{
+  position: absolute;
+  right: -3.8rem;
+  top: 5.2rem;
+  background-color: transparent;
+  border: none;
+  color: #35e6e9;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
